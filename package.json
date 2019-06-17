@@ -1,0 +1,57 @@
+{
+  "name": "coq-lang",
+  "displayName": "Coq lang",
+  "description": "Syntax highlighting for the Coq Proof Assistant",
+  "version": "0.0.1",
+  "publisher": "gares",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "coq",
+    "theorem prover",
+    "proof assistant"
+  ],
+  "readme": "https://github.com/gares/coq-lang/blob/master/README.md",
+  "bugs": "https://github.com/gares/coq-lang/issues",
+  "homepage": "https://github.com/gares/coq-lang/blob/master/README.md",
+  "contributes": {
+    "languages": [
+      {
+        "id": "coq",
+        "aliases": [
+          "Coq",
+          "coq",
+          "Gallina",
+          "gallina"
+        ],
+        "extensions": [
+          ".v"
+        ],
+        "configuration": "./coq.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "coq",
+        "scopeName": "source.coq",
+        "path": "./syntaxes/coq.tmLanguage",
+        "embeddedLanguages": {
+          "source.elpi": "elpi"
+        } ,       
+
+        "tokenTypes": {
+          "meta.tag string.quoted": "other"
+}
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gares/coq-lang.git"
+  }
+}
